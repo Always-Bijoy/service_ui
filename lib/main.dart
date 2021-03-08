@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/MyHomePage.dart';
-import 'package:flutter_ui/profile_screen.dart';
+import 'config/SizeConfig.dart';
+import 'config/styling.dart';
+import 'mamun/screens/add_new_product.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,13 +11,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Profile(),
+    return  LayoutBuilder(
+      builder: (context, constraints) {
+        return OrientationBuilder(
+          builder: (context, orientation) {
+            SizeConfig().init(constraints, orientation);
+            return MaterialApp(
+              title: 'Flutter Merchant UI',
+              debugShowCheckedModeBanner: false,
+              theme: AppTheme.lightTheme,
+              home: AddNewProductPage(),
+            );
+          },
+        );
+      },
     );
   }
 }
