@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/MyHomePage.dart';
+import 'package:flutter_ui/bijoy/home/home_screen.dart';
+import 'package:flutter_ui/mamun/screens/ServiceScreen.dart';
 import 'config/SizeConfig.dart';
 import 'config/styling.dart';
 import 'mamun/screens/add_new_product.dart';
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
               title: 'Flutter Merchant UI',
               debugShowCheckedModeBanner: false,
               theme: AppTheme.lightTheme,
-              home: AddNewProductPage(),
+              home: Home(),
             );
           },
         );

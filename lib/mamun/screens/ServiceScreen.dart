@@ -1,7 +1,7 @@
-import 'dart:math' as math;
-import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/config/SizeConfig.dart';
+import 'package:flutter_ui/config/styling.dart';
 
 class ServiceScreen extends StatelessWidget {
   String dummyText =
@@ -13,7 +13,11 @@ class ServiceScreen extends StatelessWidget {
       backgroundColor: Color(0xFFFAFAFA),
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Center(child: Text('My Service', style: TextStyle(color: Colors.black),)),
+        title: Center(
+            child: Text(
+          'My Service',
+          style: TextStyle(color: Colors.black),
+        )),
         leading: Icon(
           Icons.arrow_back_rounded,
           color: Color(0xFFB6B6B6),
@@ -22,7 +26,10 @@ class ServiceScreen extends StatelessWidget {
           FlatButton(
             textColor: Colors.white,
             onPressed: () {},
-            child: Icon(Icons.search,color: Colors.black,),
+            child: Icon(
+              Icons.search,
+              color: Colors.black,
+            ),
             shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
           ),
         ],
@@ -34,12 +41,12 @@ class ServiceScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 6),
               padding: EdgeInsets.symmetric(horizontal: 16),
               width: double.infinity,
-              height: 40,
+              height: SizeConfig.heightMultiplier * 7,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(10.0),
-                    bottomLeft: Radius.circular(10.0)),
-                color: Color(0xFF00AAA7),
+                    bottomRight: Radius.circular(12.0),
+                    bottomLeft: Radius.circular(12.0)),
+                color: AppTheme.persianGreen,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,14 +71,18 @@ class ServiceScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Service',
-                        style: TextStyle(color: Color(0xFF582E89),fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: Color(0xFF582E89),
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         width: 20,
                       ),
                       Text(
                         'Categories',
-                        style: TextStyle(color: Color(0xFFB6B6B6),fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: Color(0xFFB6B6B6),
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -107,18 +118,27 @@ class ServiceScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Description 01',
-                    style: TextStyle(color: Color(0xFF414141), fontSize: 18,),
-                  ),
+                  Text('Description 01',
+                      style: Theme.of(context).textTheme.caption.copyWith(
+                          fontSize: SizeConfig.heightMultiplier * 3 - 4)
+                      /*TextStyle(
+                      color: AppTheme.topBarBackgroundColor,
+                      // color: Color(0xFF414141),
+                      fontSize: 18,
+                    ),*/
+                      ),
                   SizedBox(
                     height: 8,
                   ),
                   Text(
                     dummyText,
-                    style: TextStyle(
+                    style: Theme.of(context).textTheme.bodyText1.copyWith(
+                        color: AppTheme.subTitleTextColor,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: .5),
+                    /*TextStyle(
                       color: Color(0xFFB6B6B6),
-                    ),
+                    ),*/
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 14),
@@ -156,7 +176,6 @@ class ServiceScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-
                           padding: EdgeInsets.only(
                               top: 4, bottom: 4, left: 10, right: 10),
                           decoration: BoxDecoration(
@@ -174,7 +193,9 @@ class ServiceScreen extends StatelessWidget {
                                 color: Colors.black,
                                 size: 14,
                               ),
-                              SizedBox(width: 4,),
+                              SizedBox(
+                                width: 4,
+                              ),
                               Text(
                                 'Share',
                                 style: TextStyle(
@@ -249,7 +270,6 @@ class ServiceScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-
                           padding: EdgeInsets.only(
                               top: 4, bottom: 4, left: 10, right: 10),
                           decoration: BoxDecoration(
@@ -267,7 +287,9 @@ class ServiceScreen extends StatelessWidget {
                                 color: Colors.black,
                                 size: 14,
                               ),
-                              SizedBox(width: 4,),
+                              SizedBox(
+                                width: 4,
+                              ),
                               Text(
                                 'Share',
                                 style: TextStyle(
@@ -342,7 +364,6 @@ class ServiceScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-
                           padding: EdgeInsets.only(
                               top: 4, bottom: 4, left: 10, right: 10),
                           decoration: BoxDecoration(
@@ -360,7 +381,9 @@ class ServiceScreen extends StatelessWidget {
                                 color: Colors.black,
                                 size: 14,
                               ),
-                              SizedBox(width: 4,),
+                              SizedBox(
+                                width: 4,
+                              ),
                               Text(
                                 'Share',
                                 style: TextStyle(
@@ -383,9 +406,12 @@ class ServiceScreen extends StatelessWidget {
                   color: Color(0xFF5E259E),
                   border: Border.all(color: Color(0xFFF7F7F7)),
                   borderRadius: BorderRadius.circular(12)),
-              child: Center(child: Text('+ Add Service', style: TextStyle(color: Colors.white),)),
+              child: Center(
+                  child: Text(
+                '+ Add Service',
+                style: TextStyle(color: Colors.white),
+              )),
             )
-
           ],
         ),
       ),

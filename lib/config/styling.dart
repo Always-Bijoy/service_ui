@@ -11,6 +11,9 @@ class AppTheme {
   static const Color subTitleTextColor = Color(0xFF9F988F);
   static const Color primaryColor = Colors.indigoAccent;
 
+  static const Color persianGreen = Color(0xFF00A9A4);
+  static const Color lightCyan = Color(0xFFEBF0F2);
+
   static final ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: AppTheme.appBackgroundColor,
     brightness: Brightness.light,
