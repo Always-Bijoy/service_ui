@@ -12,9 +12,9 @@ class Categories extends StatelessWidget {
         backgroundColor: Colors.white,
         title: Center(
             child: Text(
-              'My Store',
-              style: TextStyle(color: Colors.black),
-            )),
+          'My Store',
+          style: TextStyle(color: Colors.black),
+        )),
         leading: Icon(
           Icons.arrow_back_rounded,
           color: Color(0xFFB6B6B6),
@@ -35,9 +35,7 @@ class Categories extends StatelessWidget {
         onPressed: () {},
         label: Text('+Add'),
         backgroundColor: Color(0xFF5F259E),
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12)
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -69,6 +67,54 @@ class Categories extends StatelessWidget {
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(top: 20),
+                padding: EdgeInsets.symmetric(horizontal: 6),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Product',
+                          style: TextStyle(color: Color(0xFFB6B6B6)),
+                        ),
+                        SizedBox(
+                          width: 24,
+                        ),
+                        Text(
+                          'Categories',
+                          style: TextStyle(color: Color(0xFF582E89)),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: Divider(
+                            color: Color(0xFFB6B6B6),
+                            thickness: 2,
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Divider(
+                            color: Color(0xFF582E89),
+                            thickness: 2,
+                          ),
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child: Divider(
+                            color: Color(0xFFB6B6B6),
+                            thickness: 1,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Container(
                 margin: EdgeInsets.all(16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -86,7 +132,7 @@ class Categories extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.all(16),
-                margin: EdgeInsets.only(left: 6,right: 6, top: 16),
+                margin: EdgeInsets.only(left: 6, right: 6, top: 16),
                 decoration: BoxDecoration(
                     border: Border.all(
                       color: Color(0xFFF4F4F4),
@@ -156,8 +202,8 @@ class Categories extends StatelessWidget {
                                       .textTheme
                                       .caption
                                       .copyWith(
-                                      color: Color(0xFF17DB59),
-                                      fontWeight: FontWeight.w600),
+                                          color: Color(0xFF17DB59),
+                                          fontWeight: FontWeight.w600),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -168,8 +214,8 @@ class Categories extends StatelessWidget {
                                       .textTheme
                                       .caption
                                       .copyWith(
-                                      decoration: TextDecoration.lineThrough
-                                  ),
+                                          decoration:
+                                              TextDecoration.lineThrough),
                                 ),
                               ],
                             ),
@@ -217,7 +263,7 @@ class Categories extends StatelessWidget {
                                   ),
                                   child: Row(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(
@@ -248,7 +294,7 @@ class Categories extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.all(16),
-                margin: EdgeInsets.only(left: 6,right: 6, top: 16),
+                margin: EdgeInsets.only(left: 6, right: 6, top: 16),
                 decoration: BoxDecoration(
                     border: Border.all(
                       color: Color(0xFFF4F4F4),
@@ -318,8 +364,8 @@ class Categories extends StatelessWidget {
                                       .textTheme
                                       .caption
                                       .copyWith(
-                                      color: Color(0xFF17DB59),
-                                      fontWeight: FontWeight.w600),
+                                          color: Color(0xFF17DB59),
+                                          fontWeight: FontWeight.w600),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -330,8 +376,8 @@ class Categories extends StatelessWidget {
                                       .textTheme
                                       .caption
                                       .copyWith(
-                                      decoration: TextDecoration.lineThrough
-                                  ),
+                                          decoration:
+                                              TextDecoration.lineThrough),
                                 ),
                               ],
                             ),
@@ -379,7 +425,7 @@ class Categories extends StatelessWidget {
                                   ),
                                   child: Row(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(
@@ -426,7 +472,7 @@ class Categories extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.all(16),
-                margin: EdgeInsets.only(left: 6,right: 6, top: 16),
+                margin: EdgeInsets.only(left: 6, right: 6, top: 16),
                 decoration: BoxDecoration(
                     border: Border.all(
                       color: Color(0xFFF4F4F4),
@@ -496,8 +542,8 @@ class Categories extends StatelessWidget {
                                       .textTheme
                                       .caption
                                       .copyWith(
-                                      color: Color(0xFF17DB59),
-                                      fontWeight: FontWeight.w600),
+                                          color: Color(0xFF17DB59),
+                                          fontWeight: FontWeight.w600),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -508,8 +554,8 @@ class Categories extends StatelessWidget {
                                       .textTheme
                                       .caption
                                       .copyWith(
-                                      decoration: TextDecoration.lineThrough
-                                  ),
+                                          decoration:
+                                              TextDecoration.lineThrough),
                                 ),
                               ],
                             ),
@@ -557,7 +603,7 @@ class Categories extends StatelessWidget {
                                   ),
                                   child: Row(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.center,
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(

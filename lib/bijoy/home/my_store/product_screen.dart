@@ -14,7 +14,7 @@ class ProductScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         title: Center(
             child: Text(
-          'My Service',
+          'My Store',
           style: TextStyle(color: Colors.black),
         )),
         leading: Icon(
@@ -67,6 +67,47 @@ class ProductScreen extends StatelessWidget {
                     Icon(
                       Icons.remove_red_eye_outlined,
                       color: Colors.white,
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                padding: EdgeInsets.symmetric(horizontal: 6),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Product',
+                          style: TextStyle(color: Color(0xFF582E89)),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          'Categories',
+                          style: TextStyle(color: Color(0xFFB6B6B6)),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: Divider(
+                            color: Color(0xFF582E89),
+                            thickness: 2,
+                          ),
+                        ),
+                        Expanded(
+                          flex: 7,
+                          child: Divider(
+                            color: Color(0xFFB6B6B6),
+                            thickness: 1,
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 ),
