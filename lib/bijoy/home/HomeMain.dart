@@ -1,16 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/bijoy/home/components/app_bar.dart';
 import 'package:flutter_ui/comon_widget/btn_add_product.dart';
 import 'package:flutter_ui/config/SizeConfig.dart';
 import 'package:flutter_ui/config/styling.dart';
 
-import 'components/app_bar.dart';
-
-class Home extends StatelessWidget {
-  bool status = true;
-
+class HomeMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    bool status = true;
     return Scaffold(
       backgroundColor: Color(0xFFFAFAFA),
       body: SafeArea(
@@ -27,18 +24,36 @@ class Home extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(12.0),
                       bottomLeft: Radius.circular(12.0)),
-                  color: AppTheme.persianGreen,
+                  color: Color(0xFF382151),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'View store as Customer',
-                      style: TextStyle(color: Colors.white),
+                      "Today's Earning",
+                      style: Theme.of(context)
+                          .textTheme
+                          .caption
+                          .copyWith(color: Colors.white, fontSize: 16),
                     ),
-                    Icon(
-                      Icons.remove_red_eye_outlined,
-                      color: Colors.white,
+                    Row(
+                      children: [
+                        Text(
+                          '\$ 5478.00',
+                          style: Theme.of(context)
+                              .textTheme
+                              .caption
+                              .copyWith(color: Colors.white, fontSize: 16),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Icon(
+                          Icons.keyboard_arrow_down,
+                          color: Colors.white,
+                          size: 35,
+                        ),
+                      ],
                     )
                   ],
                 ),
@@ -56,7 +71,7 @@ class Home extends StatelessWidget {
                         color: AppTheme.persianGreen,
                       ),
                       child: Text(
-                        'rm',
+                        'rh',
                         style: Theme.of(context).textTheme.headline4.copyWith(
                               color: Colors.white,
                             ),
@@ -67,10 +82,15 @@ class Home extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Mr. Ramesh Kumar',
-                              style: Theme.of(context).textTheme.headline5),
+                          Container(
+                            child: Text('Rahil Store',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline5
+                                    .copyWith(fontWeight: FontWeight.w500)),
+                          ),
                           Text(
-                            'Carpenter',
+                            'Grocery Store',
                             style: Theme.of(context)
                                 .textTheme
                                 .caption
@@ -238,16 +258,25 @@ class Home extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('07',style: Theme.of(context).textTheme.caption.copyWith(
-                              fontSize: 18, fontWeight: FontWeight.w500),),
+                          Text(
+                            '4377',
+                            style: Theme.of(context).textTheme.caption.copyWith(
+                                fontSize: 20, fontWeight: FontWeight.w600),
+                          ),
                           Row(
                             children: [
-                              Text('Total Service',style: Theme.of(context).textTheme.caption),
-                              Spacer(),
-                              Icon(Icons.calendar_today_outlined, color: Colors.blue,
-                                  size: 20)
+                              Text('Total Service',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .caption
+                                      .copyWith(fontSize: 16)),
                             ],
-                          )
+                          ),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(Icons.calendar_today_outlined,
+                                color: Colors.blue, size: 20),
+                          ),
                         ],
                       ),
                     ),
@@ -264,51 +293,125 @@ class Home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '07',
+                            '\$ 1730.99',
                             style: Theme.of(context).textTheme.caption.copyWith(
-                                fontSize: 18, fontWeight: FontWeight.w500),
+                                fontSize: 20, fontWeight: FontWeight.w600),
                           ),
                           Row(
                             children: [
-                              Text('Marketing posts',
-                                  style: Theme.of(context).textTheme.caption),
-                              Spacer(),
-                              Icon(
-                                Icons.campaign_outlined,
-                                color: Colors.blue,
-                                size: 20,
-                              )
+                              Text('Revenue',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .caption
+                                      .copyWith(fontSize: 16)),
                             ],
-                          )
+                          ),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(Icons.monetization_on_outlined,
+                                color: Colors.blue, size: 20),
+                          ),
                         ],
                       ),
                     ),
                   ),
                 ],
               ),
-
-              Container(
-                margin: EdgeInsets.all(16),
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14),
-                  color: Colors.white
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Timing Setup', style: Theme.of(context).textTheme.caption),
-                        Text('Tab to see your business timing', style: TextStyle(fontSize: 14),),
-                      ],
-                    ),
-                    Icon(Icons.keyboard_arrow_down, size: 30,)
-                  ],
-                ),
+              SizedBox(
+                height: SizeConfig.heightMultiplier,
               ),
-              btnAddProduct()
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(14)),
+                      padding: EdgeInsets.only(
+                          left: 16, top: 22, right: 16, bottom: 12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '589',
+                            style: Theme.of(context).textTheme.caption.copyWith(
+                                fontSize: 20, fontWeight: FontWeight.w600),
+                          ),
+                          Row(
+                            children: [
+                              Text('Marketing posts',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .caption
+                                      .copyWith(fontSize: 16)),
+                            ],
+                          ),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(Icons.campaign_outlined,
+                                color: Colors.blue, size: 20),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(right: 16),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(14)),
+                      padding: EdgeInsets.only(
+                          left: 16, top: 22, right: 16, bottom: 12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                '05',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .caption
+                                    .copyWith(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 6),
+                                height: 15,
+                                width: 15,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Color(0xFF00D748)),
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "Today's Orders",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .caption
+                                    .copyWith(fontSize: 16),
+                              ),
+                            ],
+                          ),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(Icons.monetization_on_outlined,
+                                color: Colors.blue, size: 20),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              btnAddProduct(),
             ],
           ),
         ),
