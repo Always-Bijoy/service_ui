@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/MyHomePage.dart';
+import 'package:flutter_ui/bijoy/home/Payment/payment.dart';
+import 'package:flutter_ui/bijoy/home/Payment/payment_marchant.dart';
+import 'package:flutter_ui/bijoy/home/address_set/AddressSet.dart';
 import 'package:flutter_ui/bijoy/home/all_time_order/AllTimeOrder.dart';
+import 'package:flutter_ui/bijoy/home/business_hour/BusinessHour.dart';
 import 'package:flutter_ui/bijoy/home/home_screen.dart';
+import 'package:flutter_ui/bijoy/home/marketing/marketing.dart';
 import 'package:flutter_ui/bijoy/home/my_store/categories.dart';
 import 'package:flutter_ui/bijoy/home/my_store/product_screen.dart';
 import 'package:flutter_ui/mamun/screens/ServiceScreen.dart';
+import 'bijoy/home/business_hour_edit/Business_our_edit.dart';
 import 'config/SizeConfig.dart';
 import 'config/styling.dart';
 import 'mamun/screens/add_new_product.dart';
@@ -26,7 +32,7 @@ class MyApp extends StatelessWidget {
               title: 'Flutter Merchant UI',
               debugShowCheckedModeBanner: false,
               theme: AppTheme.lightTheme,
-              home: AllTimeOrder(),
+              home: AddressSet(),
             );
           },
         );
