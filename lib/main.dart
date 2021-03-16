@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               title: 'Flutter Merchant UI',
               debugShowCheckedModeBanner: false,
               theme: AppTheme.lightTheme,
-              home: AddressSet(),
+              home: Marketing(),
             );
           },
         );
