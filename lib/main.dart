@@ -3,6 +3,7 @@ import 'package:flutter_ui/bijoy/home/HomeMain.dart';
 import 'package:flutter_ui/bijoy/home/banner.dart';
 import 'package:flutter_ui/bijoy/home/business_hour/BusinessHour.dart';
 import 'package:flutter_ui/bijoy/home/chat.dart';
+import 'package:flutter_ui/bijoy/home/my_products_new/MyProducts.dart';
 import 'package:flutter_ui/bijoy/home/post_feed/Post_Feed.dart';
 import 'package:flutter_ui/bijoy/home/who_can_see_post.dart';
 import 'bijoy/home/business_hour_edit/Business_our_edit.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
               title: 'Flutter Merchant UI',
               debugShowCheckedModeBanner: false,
               theme: AppTheme.lightTheme,
-              home: Chat(),
+              home: MyProducts(),
             );
           },
         );
